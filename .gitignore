@@ -32,3 +32,10 @@
 *.app
 *build*/
 
+# bazel
+bazel-bin
+bazel-out
+bazel-testlogs
+
+#proj
+.vscode/
