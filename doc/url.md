@@ -1,14 +1,3 @@
-# GoogleTest参考
-
-- [googletest官方用例](https://github.com/google/googletest/tree/main/googletest/samples)
-- [googletest官方教程](https://google.github.io/googletest/advanced.html)
-- [googletest用法总结](https://gohalo.me/post/cpp-gtest-unit-test-usage.html)
-
-# Bazel参考
-
-- [bazel官方教程](https://bazel.build/)
-- [bazel官方用例](https://github.com/bazelbuild/examples)
-
 # Cmake参考
 
 - [官方例子](https://github.com/ttroy50/cmake-examples)
