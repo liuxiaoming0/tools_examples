@@ -18,6 +18,9 @@
 - [bazel官方教程](https://bazel.build/)
   - [使用bazel实现代码覆盖率](https://bazel.build/docs/coverage)
   - [bazel教程：配置C++工具链例子](https://bazel.build/tutorials/cc-toolchain-config#before_you_begin)、[C++工具链配置API](https://bazel.build/docs/cc-toolchain-config-reference)
+  - [bazel命令](https://bazel.build/reference/command-line-reference)（bazel build/run/test/....）
+  - [使用外部依赖项](https://bazel.build/docs/external)（、 [git_repository](https://bazel.build/rules/lib/repo/git)、[http_repository](https://bazel.build/rules/lib/repo/http)）
+  - [depset、ctx/actions.args()、性能剖析](https://bazel.build/rules/performance#performance-profiling)
 
 博文
 
@@ -45,7 +48,7 @@ $ bazel version
 
 ### 三、bazel用法
 
-#### 3.1 名词解释
+#### 3.1 名词解释 [链接](https://bazel.build/reference/glossary)
 
 - ***workspace***：对应一个工程
 - ***packages***：包含BUILD的目录，不包括有BUILD的子目录
@@ -54,7 +57,7 @@ $ bazel version
 
 #### 3.2 文件说明
 
-- ***WORKSPACE***
+- ***WORKSPACE*** : 可为空，包含用于从网络或本地文件系统中提取其他依赖项的外部代码库声明
 - ***.bazelrc***：命令默认指定参数
 - ***BUILD***：load声明rule --> 调用rule --> 生成targets
 - ***.bzl***：编写自定义rule
@@ -78,7 +81,7 @@ $ bazel version
     ],
   )
   ```
-- 内置规则
+- 内置规则 [链接](https://bazel.build/reference/be/c-cpp)
 
   - cc_binary: 可执行文件
   - cc_library: 动态库、静态库
