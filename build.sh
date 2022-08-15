@@ -4,15 +4,15 @@ bazel clean
 # 参考链接：https://bazel.build/rules/performance#hanging
 
 # 1、只生成编译产物
-bazel build //stl:stl_bin --verbose_failures
+bazel run //stl:stl_bin --verbose_failures
 
 # 2、浏览器查看CPU和内存
 PROFILE_PATH=/data/home/danaeliu/samba/c11book/tools_examples/profile
-bazel build //stl:stl_bin --verbose_failures --profile=$PROFILE_PATH/stl_profile.gz
+bazel run //stl:stl_bin --verbose_failures --profile=$PROFILE_PATH/stl_profile.gz
 # Google Chrome访问chrome://tracing/，加载xxx.gz文件
 
 # 3、生成运行时间百分比
-bazel build //stl:stl_bin --verbose_failures --profile=/PROFILE_PATH/stl_prof
+bazel run //stl:stl_bin --verbose_failures --profile=/PROFILE_PATH/stl_prof
 bazel analyze-profile ./profile/stl_prof
 
 # 4、内存占用
